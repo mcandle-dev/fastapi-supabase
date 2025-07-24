@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}등록 성공{% endblock %}
+
+{% block content %}
+<div class="success-message">
+    <h2>사용자 정보가 성공적으로 등록되었습니다!</h2>
+    <div class="user-info">
+        <p><strong>ID:</strong> {{ user.id }}</p>
+        <p><strong>이름:</strong> {{ user.name }}</p>
+        <p><strong>등급:</strong> {{ user.grade }}</p>
+        <p><strong>전화번호:</strong> {{ user.phone }}</p>
+        <p><strong>카카오 사용:</strong> {{ "사용" if user.kakao_use else "미사용" }}</p>
+        <p><strong>멤버십 카드 번호:</strong> {{ user.member_card_no }}</p>
+        <p><strong>신용카드 회사:</strong> {{ user.credit_card_name }}</p>
+        <p><strong>신용카드 번호:</strong> {{ user.credit_card_no }}</p>
+    </div>
+    <a href="/" class="button">새 사용자 등록</a>
+</div>
+{% endblock %}

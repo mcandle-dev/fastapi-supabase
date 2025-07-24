@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}사용자 정보 입력{% endblock %}
+
+{% block content %}
+<form action="/submit" method="post">
+    <label for="id">사용자 ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="grade">등급:</label>
+    <input type="text" id="grade" name="grade" required>
+
+    <label for="phone">전화번호:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="kakao_use">카카오 사용 여부:</label>
+    <select id="kakao_use" name="kakao_use">
+        <option value="true">사용</option>
+        <option value="false">미사용</option>
+    </select>
+
+    <label for="member_card_no">멤버십 카드 번호:</label>
+    <input type="text" id="member_card_no" name="member_card_no" required>
+
+    <label for="credit_card_name">신용카드 회사명:</label>
+    <input type="text" id="credit_card_name" name="credit_card_name" required>
+
+    <label for="credit_card_no">신용카드 번호:</label>
+    <input type="text" id="credit_card_no" name="credit_card_no" required>
+
+    <button type="submit">저장</button>
+</form>
+{% endblock %}

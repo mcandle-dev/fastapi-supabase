@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-gunicorn
+httpx[http2]
 python-dotenv
 supabase
 python-jose[cryptography]
